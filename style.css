@@ -1,20 +1,46 @@
 body {
-    height: 100vh;
-    background-color: antiquewhite;
+    height: 200vh;
+    margin: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.menu-bar {
+    height: 5vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+}
+
+nav {
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: font-size 0.2s ease; /* Added transition for font size */
+}
+
+a:hover {
+    font-size: 20px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: aqua;
-    padding: 10px;
-}
-
-p {
-    font-family: 'poppins' , sans-serif;
+    /* Add styles for container if needed */
 }
