@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Page</title>
+  <style>
+    body {
+      font-family: 'poppins', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Full viewport height */
+      margin: 0;
+      opacity: 0; /* Start with opacity set to 0 */
+      transition: opacity 1s ease-in-out;
+    }
+
+    .projects-text {
+      font-size: 24px;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease-in-out;
+      user-select: none;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      opacity: 0; /* Start with opacity set to 0 */
+      transition: opacity 1s ease-in-out;
+    }
+
+    .card {
+      width: 200px;
+      height: 150px;
+      background-color: #e0e0e0;
+      margin: 10px;
+      border-radius: 10px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Display the projects text
+      document.body.style.opacity = 1;
+
+      // Set a timeout to fade out the projects text and fade in the card views after 3 seconds
+      setTimeout(function() {
+        document.querySelector('.projects-text').style.opacity = 0;
+        document.querySelector('.card-container').style.opacity = 1;
+      }, 3000);
+    });
+  </script>
+</head>
+<body>
+
+  <p class="projects-text">These are some of my personal projects</p>
+
+  <div class="card-container">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+
+</body>
+</html>
